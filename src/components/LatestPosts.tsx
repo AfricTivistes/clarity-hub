@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
+import { FileText } from "lucide-react";
 
 const articles = [
   {
-    image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2017/03/tech14-640x427.jpg",
     title: "South Sudanese in the United States Keep Temporary Protected Status",
     categories: ["Latest News"],
     author: "The ClarityDesk",
@@ -10,7 +10,6 @@ const articles = [
     excerpt: "A U.S. federal judge has ruled in favor of South Sudanese nationals by blocking plans to end their Temporary Protected Status (TPS).",
   },
   {
-    image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2017/03/hero_-2-640x427.jpg",
     title: "Renewed violence, political deadlock pushing South Sudan toward crisis",
     categories: ["Latest News", "Top Stories"],
     author: "The ClarityDesk",
@@ -18,7 +17,6 @@ const articles = [
     excerpt: "South Sudan finds itself in a precarious political and security situation, with renewed fighting between government forces and opposition groups.",
   },
   {
-    image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2017/03/FOOD-dederts4-3-640x427.jpg",
     title: "South Sudan validates emergency UNESCO World Heritage Site nomination",
     categories: ["Latest News"],
     author: "The ClarityDesk",
@@ -46,12 +44,8 @@ const LatestPosts = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              <div className="relative overflow-hidden bg-muted aspect-[16/10] flex items-center justify-center">
+                <FileText className="w-16 h-16 text-muted-foreground/20" />
               </div>
               <div className="p-5">
                 <div className="flex flex-wrap gap-1.5 mb-3">

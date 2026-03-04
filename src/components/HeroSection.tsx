@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
+import { FileText } from "lucide-react";
 
 const heroArticle = {
-  image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2026/02/No-Evidence-of-South-Sudanese-Rebels-Using-Coffins-640x334.png",
   badge: "FALSE",
   categories: ["Fact-Checks", "Politics", "Top Stories"],
   title: "FACT-CHECK: These images aren't of rebels smuggling weapons in a coffin in South Sudan",
@@ -13,14 +13,12 @@ const heroArticle = {
 
 const sideArticles = [
   {
-    image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-18-at-16.19.19-640x335.jpeg",
     badge: "FALSE",
     title: "This photo of an Air Wing Sukhoi Su-30MK2 fighter jet is not from South Sudan",
     categories: ["Fact-Checks"],
     date: "February 18, 2026",
   },
   {
-    image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-18-at-15.57.21-640x330.jpeg",
     badge: "EXPLAINER",
     title: "Why there is no single device that can \"track hate speech\" online in South Sudan",
     categories: ["Explainers", "Top Stories"],
@@ -45,12 +43,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={heroArticle.image}
-                alt={heroArticle.title}
-                className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            <div className="relative overflow-hidden rounded-lg bg-muted aspect-[16/9] flex items-center justify-center">
+              <FileText className="w-20 h-20 text-muted-foreground/20" />
               <span className="absolute top-3 right-3 badge-false text-sm px-4 py-1.5 shadow-lg">
                 {heroArticle.badge}
               </span>
@@ -87,12 +81,8 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
               >
-                <div className="relative overflow-hidden rounded-lg">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                <div className="relative overflow-hidden rounded-lg bg-muted aspect-[16/9] flex items-center justify-center">
+                  <FileText className="w-12 h-12 text-muted-foreground/20" />
                   <span className={`absolute top-2 right-2 ${article.badge === "FALSE" ? "badge-false" : "badge-explainer"} shadow-md`}>
                     {article.badge}
                   </span>
