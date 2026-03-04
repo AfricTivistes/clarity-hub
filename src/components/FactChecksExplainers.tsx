@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BookOpen } from "lucide-react";
 
 const factCheckArticles = [
   {
@@ -26,7 +27,6 @@ const factCheckArticles = [
 ];
 
 const explainerArticle = {
-  image: "https://claritydesk.dangotechconcepts.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-18-at-15.57.21.jpeg",
   title: "Why there is no single device that can \"track hate speech\" online in South Sudan",
   author: "The ClarityDesk",
   date: "February 18, 2026",
@@ -94,12 +94,8 @@ const FactChecksExplainers = () => {
             </div>
 
             <a href="#" className="group block">
-              <div className="relative overflow-hidden rounded-lg">
-                <img
-                  src={explainerArticle.image}
-                  alt={explainerArticle.title}
-                  className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              <div className="relative overflow-hidden rounded-lg bg-muted aspect-[16/9] flex items-center justify-center">
+                <BookOpen className="w-16 h-16 text-muted-foreground/20" />
                 <span className="absolute top-2 right-2 badge-explainer shadow-md">Explainer</span>
               </div>
               <div className="mt-3">

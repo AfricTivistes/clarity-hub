@@ -4,9 +4,14 @@ import TrendingSidebar from "@/components/TrendingSidebar";
 import LatestPosts from "@/components/LatestPosts";
 import ElectionsSection from "@/components/ElectionsSection";
 import FactChecksExplainers from "@/components/FactChecksExplainers";
+import ExplainersSection from "@/components/ExplainersSection";
 import CTASection from "@/components/CTASection";
+import AppDownloadSection from "@/components/AppDownloadSection";
+import NewsletterSection from "@/components/NewsletterSection";
+import DisclaimerSection from "@/components/DisclaimerSection";
 import PartnersSection from "@/components/PartnersSection";
 import SiteFooter from "@/components/SiteFooter";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -28,9 +33,14 @@ const Index = () => {
       <LatestPosts />
       <ElectionsSection />
       <FactChecksExplainers />
+      <ExplainersSection />
       <CTASection />
+      <AppDownloadSection />
+      <NewsletterSection />
+      <DisclaimerSection />
       <PartnersSection />
       <SiteFooter />
+      <WhatsAppButton />
     </div>
   );
 };
